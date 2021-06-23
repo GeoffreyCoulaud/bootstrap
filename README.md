@@ -17,7 +17,7 @@ Inverse of `disable-onboard-keyboard.sh`.
 Usage : `./enable-onboard-keyboard.sh`
 
 ### `restart-pulseaudio.sh`
-Restart the audio server. This is useful if audio devices are not listed correctly or if there are severe audio bugs on all the desktop.
+Restart the audio server. This is useful if audio devices are not listed correctly or if there are severe audio bugs on all the desktop.  
 Usage : `./restart-pulseaudio.sh`
 
 ### `fullpath-to-filename.sh`
