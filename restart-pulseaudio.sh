@@ -1,4 +1,3 @@
 #!/bin/zsh
-# Redémarrer pulseaudio
-pulseaudio -k
-pulseaudio --start
+systemctl --user restart pulseaudio.socket
+systemctl --user restart pulseaudio.service
