@@ -2,7 +2,6 @@ base-devel
 fakeroot
 yay
 git
-piper
 micro
 wine
 winetricks
