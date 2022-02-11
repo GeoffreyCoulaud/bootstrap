@@ -1,3 +1,4 @@
+ar.xjuan.Cambalache
 com.belmoussaoui.Obfuscate
 com.discordapp.Discord
 com.getferdi.Ferdi
@@ -16,7 +17,6 @@ com.prusa3d.PrusaSlicer
 com.rafaelmardojai.Blanket
 com.uploadedlobster.peek
 com.valvesoftware.Steam
-com.vscodium.codium
 fr.handbrake.ghb
 io.gdevs.GDLauncher
 io.github.seadve.Kooha
@@ -39,6 +39,7 @@ org.gabmus.gfeeds
 org.gabmus.giara
 org.gimp.GIMP
 org.gnome.Boxes
+org.gnome.Builder
 org.gnome.Connections
 org.gnome.GTG
 org.gnome.Glade

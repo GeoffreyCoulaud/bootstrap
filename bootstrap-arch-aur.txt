@@ -13,3 +13,4 @@ reshade-shaders-git
 ryujinx-git
 vkbasalt
 woeusb-ng
+vscodium-bin
