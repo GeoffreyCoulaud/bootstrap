@@ -7,7 +7,6 @@ itch
 leafish-git
 legendary
 mangohud
-nerd-fonts-roboto-mono
 opentabletdriver
 reshade-shaders-git
 ryujinx-git

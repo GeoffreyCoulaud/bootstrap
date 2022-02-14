@@ -52,7 +52,9 @@ org.gnome.World.PikaBackup
 org.gnome.baobab
 org.gnome.dfeet
 org.gnome.eog
+org.gnome.font-viewer
 org.gnome.gitlab.somas.Apostrophe
+org.gtk.Gtk3theme.Adwaita-dark
 org.inkscape.Inkscape
 org.kde.kdenlive
 org.kde.krita
