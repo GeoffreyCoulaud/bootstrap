@@ -5,6 +5,7 @@ com.getferdi.Ferdi
 com.github.Eloston.UngoogledChromium
 com.github.babluboy.bookworm
 com.github.hugolabe.Wike
+com.github.jeromerobert.pdfarranger
 com.github.johnfactotum.Foliate
 com.github.liferooter.textpieces
 com.github.micahflee.torbrowser-launcher
@@ -15,6 +16,7 @@ com.parsecgaming.parsec
 com.play0ad.zeroad
 com.prusa3d.PrusaSlicer
 com.rafaelmardojai.Blanket
+com.rafaelmardojai.SharePreview
 com.uploadedlobster.peek
 com.valvesoftware.Steam
 fr.handbrake.ghb
@@ -37,9 +39,12 @@ org.freedesktop.Piper
 org.fritzing.Fritzing
 org.gabmus.gfeeds
 org.gabmus.giara
+org.gabmus.whatip
 org.gimp.GIMP
 org.gnome.Boxes
+org.gnome.BreakTimer
 org.gnome.Builder
+org.gnome.Characters
 org.gnome.Connections
 org.gnome.GTG
 org.gnome.Glade
@@ -49,12 +54,14 @@ org.gnome.Solanum
 org.gnome.Totem
 org.gnome.TwentyFortyEight
 org.gnome.World.PikaBackup
+org.gnome.World.Secrets
 org.gnome.baobab
 org.gnome.dfeet
 org.gnome.eog
 org.gnome.font-viewer
+org.gnome.gitlab.YaLTeR.VideoTrimmer
 org.gnome.gitlab.somas.Apostrophe
-org.gtk.Gtk3theme.Adwaita-dark
+org.gustavoperedo.FontDownloader
 org.inkscape.Inkscape
 org.kde.kdenlive
 org.kde.krita
