@@ -4,12 +4,7 @@ canon-pixma-mg2400-complete
 epson-inkjet-printer-escpr
 heroic-games-launcher-bin
 itch
-leafish-git
-legendary
 mangohud
 opentabletdriver
-reshade-shaders-git
 ryujinx-git
-vkbasalt
 woeusb-ng
-vscodium-bin

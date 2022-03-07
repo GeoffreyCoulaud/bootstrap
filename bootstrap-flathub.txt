@@ -24,6 +24,7 @@ com.rafaelmardojai.SharePreview
 com.uploadedlobster.peek
 com.usebottles.bottles
 com.valvesoftware.Steam
+com.vscodium.codium
 fr.handbrake.ghb
 io.gdevs.GDLauncher
 io.github.seadve.Kooha
