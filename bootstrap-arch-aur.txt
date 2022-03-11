@@ -2,9 +2,7 @@ activitywatch-bin
 an-anime-game-launcher-bin
 canon-pixma-mg2400-complete
 epson-inkjet-printer-escpr
-heroic-games-launcher-bin
 itch
 mangohud
 opentabletdriver
-ryujinx-git
 woeusb-ng

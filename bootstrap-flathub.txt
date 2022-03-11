@@ -11,9 +11,11 @@ com.github.jeromerobert.pdfarranger
 com.github.johnfactotum.Foliate
 com.github.liferooter.textpieces
 com.github.micahflee.torbrowser-launcher
+com.github.muriloventuroso.pdftricks
 com.github.phase1geo.minder
 com.github.tchx84.Flatseal
 com.github.unrud.VideoDownloader
+com.heroicgameslauncher.hgl
 com.mattjakeman.ExtensionManager
 com.obsproject.Studio
 com.parsecgaming.parsec
@@ -58,6 +60,7 @@ org.gnome.Glade
 org.gnome.Mines
 org.gnome.Rhythmbox3
 org.gnome.Solanum
+org.gnome.TextEditor
 org.gnome.Totem
 org.gnome.TwentyFortyEight
 org.gnome.World.PikaBackup
@@ -66,7 +69,6 @@ org.gnome.baobab
 org.gnome.dfeet
 org.gnome.eog
 org.gnome.font-viewer
-org.gnome.gedit
 org.gnome.gitlab.YaLTeR.VideoTrimmer
 org.gnome.gitlab.somas.Apostrophe
 org.gustavoperedo.FontDownloader
@@ -87,3 +89,4 @@ org.raspberrypi.rpi-imager
 org.signal.Signal
 org.videolan.VLC
 org.yuzu_emu.yuzu
+re.sonny.Commit
