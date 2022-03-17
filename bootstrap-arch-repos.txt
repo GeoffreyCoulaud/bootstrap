@@ -16,3 +16,4 @@ uget
 flatpak
 iputils
 ttf-meslo-nerd-font-powerlevel10k
+libratbag
