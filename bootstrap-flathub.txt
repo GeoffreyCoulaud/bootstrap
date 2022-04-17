@@ -14,26 +14,22 @@ com.github.micahflee.torbrowser-launcher
 com.github.muriloventuroso.pdftricks
 com.github.phase1geo.minder
 com.github.tchx84.Flatseal
-com.github.unrud.VideoDownloader
 com.heroicgameslauncher.hgl
 com.mattjakeman.ExtensionManager
+com.mattjakeman.ExtensionManager.Devel
 com.obsproject.Studio
-com.parsecgaming.parsec
-com.play0ad.zeroad
 com.prusa3d.PrusaSlicer
 com.rafaelmardojai.Blanket
 com.rafaelmardojai.SharePreview
-com.uploadedlobster.peek
 com.usebottles.bottles
 com.valvesoftware.Steam
 com.vscodium.codium
 fr.handbrake.ghb
 io.gdevs.GDLauncher
-io.github.seadve.Kooha
 io.github.shiftey.Desktop
+net.davidotek.pupgui2
 net.kuribo64.melonDS
 net.pcsx2.PCSX2
-net.supertuxkart.SuperTuxKart
 net.veloren.airshipper
 nl.hjdskes.gcolor3
 org.DolphinEmu.dolphin-emu
@@ -46,7 +42,6 @@ org.freecadweb.FreeCAD
 org.freedesktop.Piper
 org.fritzing.Fritzing
 org.gabmus.gfeeds
-org.gabmus.giara
 org.gabmus.whatip
 org.gimp.GIMP
 org.gnome.Boxes
@@ -54,7 +49,6 @@ org.gnome.BreakTimer
 org.gnome.Builder
 org.gnome.Calculator
 org.gnome.Characters
-org.gnome.Connections
 org.gnome.GTG
 org.gnome.Glade
 org.gnome.Mines
@@ -73,7 +67,6 @@ org.gnome.gitlab.YaLTeR.VideoTrimmer
 org.gnome.gitlab.somas.Apostrophe
 org.gustavoperedo.FontDownloader
 org.inkscape.Inkscape
-org.jdownloader.JDownloader
 org.kde.kdenlive
 org.kde.krita
 org.libreoffice.LibreOffice
@@ -90,3 +83,4 @@ org.signal.Signal
 org.videolan.VLC
 org.yuzu_emu.yuzu
 re.sonny.Commit
+sh.ppy.osu
