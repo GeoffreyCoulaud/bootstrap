@@ -24,7 +24,10 @@ com.rafaelmardojai.SharePreview
 com.usebottles.bottles
 com.valvesoftware.Steam
 com.vscodium.codium
+com.zettlr.Zettlr
+de.haeckerfelix.Shortwave
 fr.handbrake.ghb
+io.bassi.Amberol
 io.gdevs.GDLauncher
 io.github.shiftey.Desktop
 net.davidotek.pupgui2
@@ -79,6 +82,7 @@ org.pegasus_frontend.Pegasus
 org.ppsspp.PPSSPP
 org.qbittorrent.qBittorrent
 org.raspberrypi.rpi-imager
+org.ryujinx.Ryujinx
 org.signal.Signal
 org.videolan.VLC
 org.yuzu_emu.yuzu
