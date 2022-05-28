@@ -3,7 +3,6 @@ ar.xjuan.Cambalache
 com.belmoussaoui.Decoder
 com.belmoussaoui.Obfuscate
 com.discordapp.Discord
-com.endlessnetwork.aqueducts
 com.getferdi.Ferdi
 com.github.Eloston.UngoogledChromium
 com.github.babluboy.bookworm
@@ -34,7 +33,6 @@ io.bassi.Amberol
 io.gdevs.GDLauncher
 io.github.celluloid_player.Celluloid
 io.github.shiftey.Desktop
-jp.yvt.OpenSpades
 net.davidotek.pupgui2
 net.kuribo64.melonDS
 net.pcsx2.PCSX2
@@ -59,7 +57,6 @@ org.gnome.Calculator
 org.gnome.Characters
 org.gnome.GTG
 org.gnome.Glade
-org.gnome.HexGL
 org.gnome.Mines
 org.gnome.Rhythmbox3
 org.gnome.Solanum
