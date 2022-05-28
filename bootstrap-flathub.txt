@@ -1,7 +1,9 @@
+app.drey.Warp
 ar.xjuan.Cambalache
 com.belmoussaoui.Decoder
 com.belmoussaoui.Obfuscate
 com.discordapp.Discord
+com.endlessnetwork.aqueducts
 com.getferdi.Ferdi
 com.github.Eloston.UngoogledChromium
 com.github.babluboy.bookworm
@@ -14,6 +16,7 @@ com.github.micahflee.torbrowser-launcher
 com.github.muriloventuroso.pdftricks
 com.github.phase1geo.minder
 com.github.tchx84.Flatseal
+com.github.tenderowl.frog
 com.heroicgameslauncher.hgl
 com.mattjakeman.ExtensionManager
 com.mattjakeman.ExtensionManager.Devel
@@ -29,7 +32,9 @@ de.haeckerfelix.Shortwave
 fr.handbrake.ghb
 io.bassi.Amberol
 io.gdevs.GDLauncher
+io.github.celluloid_player.Celluloid
 io.github.shiftey.Desktop
+jp.yvt.OpenSpades
 net.davidotek.pupgui2
 net.kuribo64.melonDS
 net.pcsx2.PCSX2
@@ -54,6 +59,7 @@ org.gnome.Calculator
 org.gnome.Characters
 org.gnome.GTG
 org.gnome.Glade
+org.gnome.HexGL
 org.gnome.Mines
 org.gnome.Rhythmbox3
 org.gnome.Solanum
@@ -66,6 +72,7 @@ org.gnome.baobab
 org.gnome.dfeet
 org.gnome.eog
 org.gnome.font-viewer
+org.gnome.gitg
 org.gnome.gitlab.YaLTeR.VideoTrimmer
 org.gnome.gitlab.somas.Apostrophe
 org.gustavoperedo.FontDownloader
@@ -87,4 +94,5 @@ org.signal.Signal
 org.videolan.VLC
 org.yuzu_emu.yuzu
 re.sonny.Commit
+re.sonny.Workbench
 sh.ppy.osu
