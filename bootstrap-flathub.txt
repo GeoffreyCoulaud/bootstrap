@@ -25,7 +25,6 @@ com.rafaelmardojai.Blanket
 com.rafaelmardojai.SharePreview
 com.usebottles.bottles
 com.valvesoftware.Steam
-com.vscodium.codium
 com.zettlr.Zettlr
 de.haeckerfelix.Shortwave
 fr.handbrake.ghb
