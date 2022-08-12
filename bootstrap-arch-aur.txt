@@ -1,5 +1,5 @@
 activitywatch-bin
-an-anime-game-launcher-bin
+an-anime-game-launcher-gtk-bin
 canon-pixma-mg2400-complete
 epson-inkjet-printer-escpr
 opentabletdriver
