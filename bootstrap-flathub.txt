@@ -4,7 +4,6 @@ com.belmoussaoui.Decoder
 com.belmoussaoui.Obfuscate
 com.discordapp.Discord
 com.github.Eloston.UngoogledChromium
-com.github.babluboy.bookworm
 com.github.hugolabe.Wike
 com.github.huluti.Curtail
 com.github.jeromerobert.pdfarranger
@@ -23,15 +22,12 @@ com.prusa3d.PrusaSlicer
 com.rafaelmardojai.Blanket
 com.rafaelmardojai.SharePreview
 com.sweethome3d.Sweethome3d
-com.transmissionbt.Transmission
 com.usebottles.bottles
 com.valvesoftware.Steam
 com.zettlr.Zettlr
-de.haeckerfelix.Fragments
 de.haeckerfelix.Shortwave
 dev.geopjr.Collision
 fr.handbrake.ghb
-im.fluffychat.Fluffychat
 im.riot.Riot
 info.beyondallreason.bar
 io.bassi.Amberol
@@ -68,7 +64,6 @@ org.gnome.DejaDup
 org.gnome.Evolution
 org.gnome.GHex
 org.gnome.GTG
-org.gnome.Glade
 org.gnome.Mines
 org.gnome.Podcasts
 org.gnome.Rhythmbox3
