@@ -4,5 +4,5 @@ canon-pixma-mg2400-complete
 epson-inkjet-printer-escpr
 opentabletdriver
 woeusb-ng
-ttf-fira-code
 vscodium-bin
+nerd-fonts-complete
