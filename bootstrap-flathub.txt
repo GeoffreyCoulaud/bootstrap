@@ -58,7 +58,6 @@ org.fritzing.Fritzing
 org.gabmus.gfeeds
 org.gabmus.whatip
 org.gimp.GIMP
-org.gnome.Adwaita1.Demo
 org.gnome.Boxes
 org.gnome.BreakTimer
 org.gnome.Builder
