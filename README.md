@@ -10,9 +10,9 @@ Synchronizes vscodium's terminal color theme from alacritty.
 I use it to have a consistent terminal color across all my terminals.   
 `$ python3 sync-theme-alacritty-vscodium.py` 
 
-## `bootstrap-arch.sh`
+## `bootstrap/bootstrap.sh`
 Installs **my** preferred apps on a fresh install of an Arch-based Linux distro.  
-`$ bootstrap-arch.sh`
+`$ bootstrap/bootstrap.sh`
 
 ## `move-files-types.js`
 Sort all file types in a directory's subdirs that match a prefix.  
