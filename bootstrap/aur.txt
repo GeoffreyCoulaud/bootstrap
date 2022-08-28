@@ -6,3 +6,4 @@ opentabletdriver
 woeusb-ng
 vscodium-bin
 nerd-fonts-complete
+goverlay-bin
