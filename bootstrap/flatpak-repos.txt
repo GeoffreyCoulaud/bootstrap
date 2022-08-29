@@ -1,0 +1,2 @@
+flathub https://flathub.org/repo/flathub.flatpakrepo
+launcher.moe https://gol.launcher.moe/gol.launcher.moe.flatpakrepo

@@ -69,6 +69,14 @@ fi
 
 if [[ $do_install_flathub = $y ]] 
 then
-	echo "Installing from flathub"
-	flatpak install -y $(cat ./flathub.txt)
+	echo "Adding flatpak repos"
+	while IFS= read -r line
+	do
+		flatpak remote-add --if-not-exists $line
+	done < ./flatpak-repos.txt
+	echo "Installing flatpaks"
+	while IFS= read -r line
+	do
+		flatpak install -y $line
+	done < ./flatpak.txt
 fi
