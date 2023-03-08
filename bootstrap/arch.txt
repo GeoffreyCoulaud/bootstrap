@@ -19,3 +19,7 @@ ttf-meslo-nerd-font-powerlevel10k
 libratbag
 networkmanager-openvpn
 gvfs-smb
+docker
+mediainfo
+nmap
+psensor
