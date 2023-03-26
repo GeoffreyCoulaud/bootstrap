@@ -28,6 +28,7 @@ flathub	com.valvesoftware.Steam
 flathub	dev.geopjr.Collision
 flathub	fr.handbrake.ghb
 flathub	fr.romainvigier.zap
+flathub	hu.kramo.Cartridges
 flathub	im.riot.Riot
 flathub	info.beyondallreason.bar
 flathub	info.febvre.Komikku
@@ -35,6 +36,7 @@ flathub	io.gdevs.GDLauncher
 flathub	io.github.peazip.PeaZip
 flathub	io.github.spacingbat3.webcord
 flathub	io.otsaloma.gaupol
+flathub	me.iepure.devtoolbox
 flathub	me.kozec.syncthingtk
 launcher.moe	moe.launcher.an-anime-game-launcher
 flathub	net.davidotek.pupgui2
@@ -42,7 +44,6 @@ flathub	net.kuribo64.melonDS
 flathub	net.pcsx2.PCSX2
 flathub	net.veloren.airshipper
 flathub	nl.hjdskes.gcolor3
-flathub	org.DolphinEmu.dolphin-emu
 flathub	org.blender.Blender
 flathub	org.citra_emu.citra
 flathub	org.desmume.DeSmuME
@@ -92,7 +93,6 @@ flathub	org.mozilla.firefox
 flathub	org.nickvision.tubeconverter
 flathub	org.nicotine_plus.Nicotine
 flathub	org.onlyoffice.desktopeditors
-flathub	org.openrgb.OpenRGB
 flathub	org.openscad.OpenSCAD
 flathub	org.ppsspp.PPSSPP
 flathub	org.qbittorrent.qBittorrent
