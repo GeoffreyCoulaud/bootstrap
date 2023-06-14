@@ -21,3 +21,5 @@ nmap
 psensor
 dolphin-emu
 micro
+lutris
+gnome-system-monitor
