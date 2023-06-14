@@ -1,10 +1,7 @@
-activitywatch-bin
 canon-pixma-mg2400-complete
 epson-inkjet-printer-escpr
-opentabletdriver
 woeusb-ng
 vscodium-bin
-nerd-fonts-complete
 goverlay-bin
 ttf-comic-mono-git
 jdupes
@@ -12,4 +9,3 @@ google-chrome
 makemkv
 vkbasalt
 reshade-shaders-git
-vgrep
