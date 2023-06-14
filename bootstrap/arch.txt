@@ -5,11 +5,8 @@ git
 micro
 wine
 winetricks
-timeshift
 gparted
-etcher
 lutris
-oh-my-zsh
 nodejs
 npm
 uget
@@ -23,3 +20,4 @@ mediainfo
 nmap
 psensor
 dolphin-emu
+micro
