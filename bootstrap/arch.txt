@@ -23,4 +23,4 @@ dolphin-emu
 micro
 lutris
 gnome-system-monitor
-flatpak
+baobab
