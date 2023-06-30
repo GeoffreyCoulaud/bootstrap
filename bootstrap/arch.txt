@@ -25,3 +25,4 @@ lutris
 gnome-system-monitor
 baobab
 bat
+touchegg
