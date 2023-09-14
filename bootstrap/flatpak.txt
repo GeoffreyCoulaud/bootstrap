@@ -1,6 +1,7 @@
 flathub	com.belmoussaoui.Decoder
 flathub	com.belmoussaoui.Obfuscate
 flathub	com.discordapp.Discord
+flathub	com.felipekinoshita.Wildcard
 flathub	com.georgefb.mangareader
 flathub	com.github.Eloston.UngoogledChromium
 flathub	com.github.hugolabe.Wike
@@ -14,8 +15,6 @@ flathub	com.github.phase1geo.minder
 flathub	com.github.tchx84.Flatseal
 flathub	com.github.tenderowl.frog
 flathub	com.github.wwmm.easyeffects
-flathub	com.github.wwmm.pulseeffects
-flathub	com.gitlab.newsflash
 flathub	com.google.AndroidStudio
 flathub	com.heroicgameslauncher.hgl
 flathub	com.mattjakeman.ExtensionManager
@@ -37,13 +36,14 @@ flathub	info.cemu.Cemu
 flathub	info.febvre.Komikku
 flathub	io.gdevs.GDLauncher
 flathub	io.github.alainm23.planify
+flathub	io.github.antimicrox.antimicrox
 flathub	io.github.hakuneko.HakuNeko
 flathub	io.github.nate_xyz.Resonance
 flathub	io.github.peazip.PeaZip
 flathub	io.github.seadve.Mousai
+flathub	io.gitlab.news_flash.NewsFlash
 flathub	io.itch.itch
 flathub	io.otsaloma.gaupol
-flathub	me.iepure.devtoolbox
 flathub	me.kozec.syncthingtk
 launcher.moe	moe.launcher.an-anime-game-launcher
 flathub	net.davidotek.pupgui2
@@ -61,8 +61,8 @@ flathub	org.freecadweb.FreeCAD
 flathub	org.freedesktop.Piper
 flathub	org.fritzing.Fritzing
 flathub	org.gabmus.whatip
-flathub	org.gaphor.Gaphor
 flathub	org.gimp.GIMP
+flathub	org.gnome.Boxes
 flathub	org.gnome.BreakTimer
 flathub	org.gnome.Builder
 flathub	org.gnome.Calculator
@@ -73,7 +73,6 @@ flathub	org.gnome.Epiphany
 flathub	org.gnome.Evolution
 flathub	org.gnome.Fractal
 flathub	org.gnome.GHex
-flathub	org.gnome.GTG
 flathub	org.gnome.Mines
 flathub	org.gnome.Podcasts
 flathub	org.gnome.Polari
@@ -98,6 +97,7 @@ flathub	org.libreoffice.LibreOffice
 flathub	org.libretro.RetroArch
 flathub	org.mozilla.Thunderbird
 flathub	org.mozilla.firefox
+flathub	org.neverball.Neverball
 flathub	org.nickvision.tubeconverter
 flathub	org.nicotine_plus.Nicotine
 flathub	org.onionshare.OnionShare
@@ -107,10 +107,8 @@ flathub	org.ppsspp.PPSSPP
 flathub	org.qbittorrent.qBittorrent
 flathub	org.ryujinx.Ryujinx
 flathub	org.signal.Signal
-flathub	org.sqlitebrowser.sqlitebrowser
 flathub	org.videolan.VLC
 flathub	org.yuzu_emu.yuzu
-flathub	page.codeberg.Imaginer.Imaginer
 flathub	re.sonny.Commit
 flathub	re.sonny.Workbench
 flathub	rest.insomnia.Insomnia
