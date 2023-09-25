@@ -11,12 +11,14 @@ flathub	com.github.johnfactotum.Foliate
 flathub	com.github.joseexposito.touche
 flathub	com.github.micahflee.torbrowser-launcher
 flathub	com.github.muriloventuroso.pdftricks
+flathub	com.github.neithern.g4music
 flathub	com.github.phase1geo.minder
 flathub	com.github.tchx84.Flatseal
 flathub	com.github.tenderowl.frog
 flathub	com.github.wwmm.easyeffects
 flathub	com.google.AndroidStudio
 flathub	com.heroicgameslauncher.hgl
+flathub	com.logseq.Logseq
 flathub	com.mattjakeman.ExtensionManager
 flathub	com.obsproject.Studio
 flathub	com.prusa3d.PrusaSlicer
@@ -37,6 +39,7 @@ flathub	info.febvre.Komikku
 flathub	io.gdevs.GDLauncher
 flathub	io.github.alainm23.planify
 flathub	io.github.antimicrox.antimicrox
+flathub	io.github.cleomenezesjr.Escambo
 flathub	io.github.hakuneko.HakuNeko
 flathub	io.github.nate_xyz.Resonance
 flathub	io.github.peazip.PeaZip
@@ -48,9 +51,11 @@ flathub	me.kozec.syncthingtk
 launcher.moe	moe.launcher.an-anime-game-launcher
 flathub	net.davidotek.pupgui2
 flathub	net.kuribo64.melonDS
+flathub	net.lutris.Lutris
 flathub	net.pcsx2.PCSX2
 flathub	net.veloren.airshipper
 flathub	nl.hjdskes.gcolor3
+flathub	org.DolphinEmu.dolphin-emu
 flathub	org.blender.Blender
 flathub	org.citra_emu.citra
 flathub	org.desmume.DeSmuME
@@ -62,6 +67,7 @@ flathub	org.freedesktop.Piper
 flathub	org.fritzing.Fritzing
 flathub	org.gabmus.whatip
 flathub	org.gimp.GIMP
+gnome-nightly	org.gnome.Adwaita1.Demo
 flathub	org.gnome.Boxes
 flathub	org.gnome.BreakTimer
 flathub	org.gnome.Builder
@@ -84,6 +90,7 @@ flathub	org.gnome.World.Secrets
 flathub	org.gnome.clocks
 flathub	org.gnome.design.AppIconPreview
 flathub	org.gnome.design.IconLibrary
+flathub	org.gnome.design.Lorem
 flathub	org.gnome.eog
 flathub	org.gnome.font-viewer
 flathub	org.gnome.gitlab.YaLTeR.Identity
@@ -107,9 +114,9 @@ flathub	org.ppsspp.PPSSPP
 flathub	org.qbittorrent.qBittorrent
 flathub	org.ryujinx.Ryujinx
 flathub	org.signal.Signal
+flathub	org.sqlitebrowser.sqlitebrowser
 flathub	org.videolan.VLC
 flathub	org.yuzu_emu.yuzu
 flathub	re.sonny.Commit
 flathub	re.sonny.Workbench
-flathub	rest.insomnia.Insomnia
 flathub	sh.ppy.osu

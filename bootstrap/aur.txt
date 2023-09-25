@@ -7,7 +7,5 @@ ttf-comic-mono-git
 jdupes
 google-chrome
 makemkv
-vkbasalt
-reshade-shaders-git
 etcher-bin
 oh-my-zsh

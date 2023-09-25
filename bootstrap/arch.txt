@@ -6,7 +6,6 @@ micro
 wine
 winetricks
 gparted
-lutris
 nodejs
 npm
 uget
@@ -19,14 +18,9 @@ docker
 mediainfo
 nmap
 psensor
-dolphin-emu
-micro
-lutris
 gnome-system-monitor
 baobab
 bat
 touchegg
-nodejs
-npm
 yarn
 jq
