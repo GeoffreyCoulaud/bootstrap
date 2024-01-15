@@ -96,4 +96,3 @@ flathub	org.yuzu_emu.yuzu
 flathub	re.sonny.Commit
 flathub	re.sonny.Workbench
 flathub	sh.ppy.osu
-gnome-nightly	org.gnome.Adwaita1.Demo
