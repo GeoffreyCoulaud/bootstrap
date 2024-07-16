@@ -4,7 +4,6 @@ etcher-bin
 google-chrome
 jdupes
 makemkv
-oh-my-zsh
 ttf-comic-mono-git
 vscodium
 oh-my-posh
