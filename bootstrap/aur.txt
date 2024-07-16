@@ -2,10 +2,8 @@ canon-pixma-mg2400-complete
 epson-inkjet-printer-escpr
 etcher-bin
 google-chrome
-goverlay-bin
 jdupes
 makemkv
 oh-my-zsh
 ttf-comic-mono-git
 vscodium-bin
-woeusb-ng
