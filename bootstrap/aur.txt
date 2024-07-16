@@ -6,4 +6,5 @@ jdupes
 makemkv
 oh-my-zsh
 ttf-comic-mono-git
-vscodium-bin
+vscodium
+oh-my-posh

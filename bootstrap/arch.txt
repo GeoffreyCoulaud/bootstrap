@@ -30,3 +30,4 @@ wireshark-qt
 yarn
 yay
 yt-dlp
+zsh
