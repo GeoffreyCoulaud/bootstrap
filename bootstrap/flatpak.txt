@@ -31,6 +31,7 @@ flathub	io.github.cleomenezesjr.Escambo
 flathub	io.github.hakuneko.HakuNeko
 flathub	io.github.nate_xyz.Resonance
 flathub	io.github.peazip.PeaZip
+flathub	io.github.pwr_solaar.solaar
 flathub	io.github.ungoogled_software.ungoogled_chromium
 flathub	io.gitlab.news_flash.NewsFlash
 flathub	io.itch.itch
@@ -47,7 +48,6 @@ flathub	org.citra_emu.citra
 flathub	org.desmume.DeSmuME
 flathub	org.filezillaproject.Filezilla
 flathub	org.freecadweb.FreeCAD
-flathub	org.freedesktop.Piper
 flathub	org.gabmus.whatip
 flathub	org.gimp.GIMP
 flathub	org.gnome.Boxes
