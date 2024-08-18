@@ -7,3 +7,4 @@ makemkv
 ttf-comic-mono-git
 vscodium
 oh-my-posh
+input-remapper-git
