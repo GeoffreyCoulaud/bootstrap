@@ -15,6 +15,7 @@ flathub	com.github.joseexposito.touche
 flathub	com.github.maoschanz.drawing
 flathub	com.github.muriloventuroso.pdftricks
 flathub	com.github.phase1geo.minder
+flathub	com.github.qarmin.czkawka
 flathub	com.github.tchx84.Flatseal
 flathub	com.github.tenderowl.frog
 flathub	com.github.wwmm.easyeffects
@@ -45,6 +46,7 @@ flathub	io.github.peazip.PeaZip
 flathub	io.github.pwr_solaar.solaar
 flathub	io.github.tfuxu.Halftone
 flathub	io.github.ungoogled_software.ungoogled_chromium
+flathub	io.gitlab.librewolf-community
 flathub	io.gitlab.news_flash.NewsFlash
 flathub	io.itch.itch
 flathub	io.otsaloma.gaupol
@@ -87,6 +89,7 @@ flathub	org.gnome.gitlab.YaLTeR.Identity
 flathub	org.gnome.gitlab.somas.Apostrophe
 flathub	org.inkscape.Inkscape
 flathub	org.kde.kdenlive
+flathub	org.kde.kgeotag
 flathub	org.kde.konversation
 flathub	org.kde.krita
 flathub	org.kicad.KiCad
