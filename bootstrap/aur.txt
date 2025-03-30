@@ -1,10 +1,7 @@
-canon-pixma-mg2400-complete
-epson-inkjet-printer-escpr
-etcher-bin
 google-chrome
 jdupes
 makemkv
 ttf-comic-mono-git
-vscodium
 oh-my-posh
-input-remapper-git
+input-remapper-bin
+visual-studio-code-bin

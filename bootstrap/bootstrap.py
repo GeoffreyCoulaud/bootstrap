@@ -123,7 +123,7 @@ class SetZshAsDefaultShell(Step):
     def run(self) -> None:
         run(["sudo", "pacman", "-Syu", "--noconfirm", "zsh"])
         zsh = run(
-            ["command", "-v", "zsh"], capture_output=True, text=True
+            ["command", "-v", "zsh"], shell=True, capture_output=True, text=True
         ).stdout.strip()
         run(["chsh", "-s", zsh])
         print("Please logout and login again to apply the changes.")

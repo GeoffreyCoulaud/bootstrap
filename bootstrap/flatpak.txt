@@ -105,7 +105,6 @@ flathub	org.openscad.OpenSCAD
 flathub	org.pipewire.Helvum
 flathub	org.ppsspp.PPSSPP
 flathub	org.qbittorrent.qBittorrent
-flathub	org.ryujinx.Ryujinx
 flathub	org.signal.Signal
 flathub	org.tenacityaudio.Tenacity
 flathub	org.torproject.torbrowser-launcher
