@@ -1,7 +1,4 @@
-google-chrome
-jdupes
 makemkv
 ttf-comic-mono-git
 oh-my-posh
-input-remapper-bin
 visual-studio-code-bin
