@@ -34,7 +34,6 @@ class Step(ABC):
 
 
 class InstallPrerequisites(Step):
-
     def get_description(self) -> str:
         return "Install prerequisites"
 
@@ -43,7 +42,6 @@ class InstallPrerequisites(Step):
 
 
 class UpdatePacmanMirrors(Step):
-
     def get_description(self) -> str:
         return "Update pacman mirrors"
 
@@ -53,7 +51,6 @@ class UpdatePacmanMirrors(Step):
 
 
 class InstallDistroPackages(Step):
-
     def get_description(self) -> str:
         return "Install packages from repos"
 
@@ -63,7 +60,6 @@ class InstallDistroPackages(Step):
 
 
 class InstallAurPackages(Step):
-
     def get_description(self) -> str:
         return "Install packages from the AUR"
 
@@ -87,7 +83,6 @@ class InstallAurPackages(Step):
 
 
 class AddFlatpakRepositories(Step):
-
     def get_description(self) -> str:
         return "Install flatpak repositories"
 
@@ -99,7 +94,6 @@ class AddFlatpakRepositories(Step):
 
 
 class InstallFlatpakPackages(Step):
-
     def get_description(self) -> str:
         return "Install packages from flatpak"
 
@@ -116,7 +110,6 @@ class InstallFlatpakPackages(Step):
 
 
 class SetZshAsDefaultShell(Step):
-
     def get_description(self) -> str:
         return "Set zsh as default shell"
 
@@ -142,7 +135,6 @@ def handle_keyboard_interrupt(original_function) -> Callable:
 
 @handle_keyboard_interrupt
 def main() -> None:
-
     parser = ArgumentParser()
     parser.add_argument(
         "-d",
