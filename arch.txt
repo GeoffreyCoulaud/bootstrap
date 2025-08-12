@@ -24,4 +24,5 @@ unrar
 wireshark-qt
 yarn
 yay
+zoxide
 zsh

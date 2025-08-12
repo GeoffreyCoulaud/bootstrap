@@ -2,3 +2,4 @@ makemkv
 ttf-comic-mono-git
 oh-my-posh
 visual-studio-code-bin
+input-remapper-bin
