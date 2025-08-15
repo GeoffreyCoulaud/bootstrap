@@ -1,6 +1,7 @@
 baobab
 base-devel
 bat
+coreutils
 docker
 docker-compose
 fakeroot
@@ -19,10 +20,12 @@ noto-fonts-emoji
 npm
 openrgb
 psensor
+solaar
 ttf-jetbrains-mono-nerd
 unrar
 wireshark-qt
 yarn
 yay
 zoxide
+zellij
 zsh
