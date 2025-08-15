@@ -20,7 +20,6 @@ noto-fonts-emoji
 npm
 openrgb
 psensor
-solaar
 ttf-jetbrains-mono-nerd
 unrar
 wireshark-qt
