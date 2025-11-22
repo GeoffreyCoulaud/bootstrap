@@ -2,9 +2,39 @@
 
 from abc import ABC, abstractmethod
 from argparse import ArgumentParser
+from collections import defaultdict
 from functools import wraps
 from subprocess import run
-from typing import Callable, Iterable
+from typing import Callable
+from os import geteuid, getlogin, getuid, seteuid
+from contextlib import AbstractContextManager
+
+
+def handle_keyboard_interrupt(original_function) -> Callable:
+    @wraps(original_function)
+    def wrapper(*args, **kwargs):
+        try:
+            original_function(*args, **kwargs)
+        except KeyboardInterrupt:
+            print("\nInterrupted by user")
+
+    return wrapper
+
+
+class AsNonRoot(AbstractContextManager):
+    """
+    Context manager to temporarily drop root privileges.
+    Uses the saved uid to switch to the original user.
+    """
+
+    __effective_uid: int
+
+    def __enter__(self) -> None:
+        self.__effective_uid = geteuid()
+        seteuid(getuid())
+
+    def __exit__(self, exc_type, exc_value, traceback) -> None:
+        seteuid(self.__effective_uid)
 
 
 class Step(ABC):
@@ -18,9 +48,13 @@ class Step(ABC):
         self.__total = total
         super().__init__()
 
-    @abstractmethod
     def get_description(self) -> str:
-        """Method that returns a description of the step."""
+        """
+        Method that returns a description of the step.
+        By default, uses the docstring of the class.
+        """
+        doc = self.__class__.__doc__
+        return doc.strip() if doc is not None else "No description available."
 
     def _get_is_enabled_prompt(self) -> str:
         return f"[{self.__rank}/{self.__total}] {self.get_description()} (y/n) "
@@ -34,34 +68,30 @@ class Step(ABC):
 
 
 class InstallPrerequisites(Step):
-    def get_description(self) -> str:
-        return "Install prerequisites"
+    """Install prerequisites for the bootstrap script"""
 
     def run(self) -> None:
-        run(["sudo", "pacman", "-S", "--noconfirm", "yay", "flatpak"])
+        run(["pacman", "-S", "--noconfirm", "yay", "flatpak"])
 
 
 class UpdatePacmanMirrors(Step):
-    def get_description(self) -> str:
-        return "Update pacman mirrors"
+    """Update pacman mirrors to the fastest ones"""
 
     def run(self) -> None:
-        run(["sudo", "pacman-mirrors", "--fasttrack"])
-        run(["sudo", "pacman", "-Syy"])
+        run(["pacman-mirrors", "--fasttrack"])
+        run(["pacman", "-Syy"])
 
 
 class InstallDistroPackages(Step):
-    def get_description(self) -> str:
-        return "Install packages from repos"
+    """Install packages from the distro repositories"""
 
     def run(self) -> None:
         with open("arch.txt", "r", encoding="utf-8") as file:
-            run(["sudo", "pacman", "-Syu", "--noconfirm", "-"], stdin=file)
+            run(["pacman", "-Syu", "--noconfirm", "-"], stdin=file)
 
 
 class InstallAurPackages(Step):
-    def get_description(self) -> str:
-        return "Install packages from the AUR"
+    """Install packages from the AUR"""
 
     def run(self) -> None:
         with open("aur.txt", "r", encoding="utf-8") as file:
@@ -69,6 +99,7 @@ class InstallAurPackages(Step):
                 [
                     "yay",
                     "-S",
+                    "--needed",
                     "--noconfirm",
                     "--norebuild",
                     "--cleanmenu=false",
@@ -83,8 +114,7 @@ class InstallAurPackages(Step):
 
 
 class AddFlatpakRepositories(Step):
-    def get_description(self) -> str:
-        return "Install flatpak repositories"
+    """Add flatpak repositories"""
 
     def run(self) -> None:
         with open("flatpak-repos.txt", "r", encoding="utf-8") as file:
@@ -94,27 +124,23 @@ class AddFlatpakRepositories(Step):
 
 
 class InstallFlatpakPackages(Step):
-    def get_description(self) -> str:
-        return "Install packages from flatpak"
+    """Install packages from flatpak"""
 
     def run(self) -> None:
         with open("flatpak.txt", "r", encoding="utf-8") as file:
-            refs_per_repo = {}
+            refs_per_repo: dict[str, list[str]] = defaultdict(list[str])
             for line in file:
                 repo, ref = line.split()
-                if repo not in refs_per_repo:
-                    refs_per_repo[repo] = []
                 refs_per_repo[repo].append(ref)
             for repo, refs in refs_per_repo.items():
                 run(["flatpak", "install", "--noninteractive", repo, *refs])
 
 
 class SetZshAsDefaultShell(Step):
-    def get_description(self) -> str:
-        return "Set zsh as default shell"
+    """Set zsh as the default shell"""
 
     def run(self) -> None:
-        run(["sudo", "pacman", "-Syu", "--noconfirm", "zsh"])
+        run(["pacman", "-S", "--needed", "--noconfirm", "zsh"])
         zsh = run(
             ["command", "-v", "zsh"], shell=True, capture_output=True, text=True
         ).stdout.strip()
@@ -122,19 +148,44 @@ class SetZshAsDefaultShell(Step):
         print("Please logout and login again to apply the changes.")
 
 
-def handle_keyboard_interrupt(original_function) -> Callable:
-    @wraps(original_function)
-    def wrapper(*args, **kwargs):
-        try:
-            original_function(*args, **kwargs)
-        except KeyboardInterrupt:
-            print("\nInterrupted by user")
+class SetupOpenTabletDriver(Step):
+    """Setup OpenTabletDriver for graphics tablet support"""
 
-    return wrapper
+    def run(self) -> None:
+        # Install OpenTabletDriver from AUR
+        run(["yay", "-S", "--needed", "--noconfirm", "opentabletdriver"])
+        # Enable and start the service
+        with AsNonRoot():
+            run(["systemctl", "--user", "enable", "--now", "opentabletdriver"])
+
+
+class SetupDdcutil(Step):
+    """Setup ddcutil for monitor brightness control"""
+
+    def run(self) -> None:
+        # Install ddcutil
+        run(["pacman", "-S", "--needed", "--noconfirm", "ddcutil"])
+        # Install udev rules
+        run(["cp", "/etc/udev/rules.d/60-ddcutil-i2c.rules", "/etc/udev/rules.d"])
+        # Create i2c group and add current user to it
+        run(["groupadd", "--system", "i2c"])
+        run(["usermod", getlogin(), "-aG", "i2c"])
+        # load i2c-dev automatically
+        with open("/etc/modules-load.d/i2c.conf", "a") as file:
+            file.write("i2c-dev\n")
+        print("Please reboot for changes to take effect.")
 
 
 @handle_keyboard_interrupt
 def main() -> None:
+    """Main function of the bootstrap script."""
+
+    # Check for root privileges
+    if geteuid() != 0:
+        print("This script must be run with sudo or as root.")
+        exit(1)
+
+    # Parse arguments
     parser = ArgumentParser()
     parser.add_argument(
         "-d",
@@ -147,12 +198,15 @@ def main() -> None:
     print("Welcome to Geoffrey's bootstrap script")
     print("This script is made to work on Arch linux and its derivatives.")
 
-    all_steps_classes: Iterable[Step] = [
+    # Run steps
+    all_steps_classes: list[type[Step]] = [
         UpdatePacmanMirrors,
         InstallDistroPackages,
         InstallAurPackages,
         AddFlatpakRepositories,
         InstallFlatpakPackages,
+        SetupOpenTabletDriver,
+        SetupDdcutil,
         SetZshAsDefaultShell,
     ]
     all_steps = (
