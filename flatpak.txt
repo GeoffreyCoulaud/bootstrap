@@ -4,10 +4,14 @@ flathub	cafe.avery.Delfin
 flathub	cc.arduino.IDE2
 flathub	ch.protonmail.protonmail-bridge
 flathub	com.belmoussaoui.Authenticator
+flathub	com.belmoussaoui.Decoder
 flathub	com.belmoussaoui.Obfuscate
+flathub	com.calibre_ebook.calibre
 flathub	com.discordapp.Discord
+flathub	com.felipekinoshita.Wildcard
 flathub	com.georgefb.mangareader
 flathub	com.github.Anuken.Mindustry
+flathub	com.github.finefindus.eyedropper
 flathub	com.github.huluti.Curtail
 flathub	com.github.iwalton3.jellyfin-media-player
 flathub	com.github.jeromerobert.pdfarranger
@@ -38,8 +42,10 @@ flathub	info.febvre.Komikku
 flathub	io.dbeaver.DBeaverCommunity
 flathub	io.github.alainm23.planify
 flathub	io.github.antimicrox.antimicrox
+flathub	io.github.ciromattia.kcc
 flathub	io.github.cleomenezesjr.Escambo
 flathub	io.github.dyegoaurelio.simple-wireplumber-gui
+flathub	io.github.gen2brain.cbconvert
 flathub	io.github.hakuneko.HakuNeko
 flathub	io.github.nate_xyz.Resonance
 flathub	io.github.nokse22.Exhibit
@@ -47,9 +53,11 @@ flathub	io.github.peazip.PeaZip
 flathub	io.github.pwr_solaar.solaar
 flathub	io.github.tfuxu.Halftone
 flathub	io.github.ungoogled_software.ungoogled_chromium
+flathub	io.gitlab.adhami3310.Converter
 flathub	io.gitlab.adhami3310.Impression
 flathub	io.gitlab.librewolf-community
 flathub	io.gitlab.news_flash.NewsFlash
+flathub	io.gitlab.theevilskeleton.Upscaler
 flathub	io.itch.itch
 flathub	io.missioncenter.MissionCenter
 flathub	io.otsaloma.gaupol
@@ -60,6 +68,7 @@ flathub	net.epson.epsonscan2
 flathub	net.kuribo64.melonDS
 flathub	net.lutris.Lutris
 flathub	net.pcsx2.PCSX2
+flathub	net.poedit.Poedit
 flathub	net.veloren.airshipper
 flathub	org.DolphinEmu.dolphin-emu
 flathub	org.aegisub.Aegisub
@@ -67,6 +76,7 @@ flathub	org.azahar_emu.Azahar
 flathub	org.blender.Blender
 flathub	org.desmume.DeSmuME
 flathub	org.duckstation.DuckStation
+flathub	org.ferdium.Ferdium
 flathub	org.filezillaproject.Filezilla
 flathub	org.freecad.FreeCAD
 flathub	org.gabmus.whatip
@@ -79,9 +89,11 @@ flathub	org.gnome.Calendar
 flathub	org.gnome.Characters
 flathub	org.gnome.Connections
 flathub	org.gnome.Evolution
+flathub	org.gnome.Firmware
 flathub	org.gnome.Fractal
 flathub	org.gnome.GHex
 flathub	org.gnome.Mines
+flathub	org.gnome.NetworkDisplays
 flathub	org.gnome.Podcasts
 flathub	org.gnome.Polari
 flathub	org.gnome.Rhythmbox3
@@ -93,6 +105,7 @@ flathub	org.gnome.clocks
 flathub	org.gnome.design.AppIconPreview
 flathub	org.gnome.design.IconLibrary
 flathub	org.gnome.design.Lorem
+flathub	org.gnome.design.SymbolicPreview
 flathub	org.gnome.eog
 flathub	org.gnome.font-viewer
 flathub	org.gnome.gitlab.YaLTeR.Identity
@@ -114,6 +127,7 @@ flathub	org.onlyoffice.desktopeditors
 flathub	org.openscad.OpenSCAD
 flathub	org.pipewire.Helvum
 flathub	org.ppsspp.PPSSPP
+flathub	org.prismlauncher.PrismLauncher
 flathub	org.qbittorrent.qBittorrent
 flathub	org.signal.Signal
 flathub	org.tenacityaudio.Tenacity
