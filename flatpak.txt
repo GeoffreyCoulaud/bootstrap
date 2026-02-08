@@ -26,9 +26,11 @@ flathub	com.github.tenderowl.frog
 flathub	com.github.wwmm.easyeffects
 flathub	com.heroicgameslauncher.hgl
 flathub	com.jeffser.Alpaca
+flathub	com.makemkv.MakeMKV
 flathub	com.mattjakeman.ExtensionManager
 flathub	com.obsproject.Studio
 flathub	com.prusa3d.PrusaSlicer
+flathub	com.ranfdev.DistroShelf
 flathub	com.ultimaker.cura
 flathub	com.usebottles.bottles
 flathub	com.usebruno.Bruno
@@ -69,6 +71,7 @@ flathub	net.poedit.Poedit
 flathub	net.veloren.airshipper
 flathub	org.DolphinEmu.dolphin-emu
 flathub	org.aegisub.Aegisub
+flathub	org.audacityteam.Audacity
 flathub	org.azahar_emu.Azahar
 flathub	org.blender.Blender
 flathub	org.desmume.DeSmuME
@@ -77,7 +80,6 @@ flathub	org.filezillaproject.Filezilla
 flathub	org.freecad.FreeCAD
 flathub	org.gabmus.whatip
 flathub	org.gimp.GIMP
-flathub	org.gnome.Boxes
 flathub	org.gnome.Builder
 flathub	org.gnome.Calculator
 flathub	org.gnome.Calendar
@@ -122,7 +124,6 @@ flathub	org.ppsspp.PPSSPP
 flathub	org.prismlauncher.PrismLauncher
 flathub	org.qbittorrent.qBittorrent
 flathub	org.signal.Signal
-flathub	org.tenacityaudio.Tenacity
 flathub	org.torproject.torbrowser-launcher
 flathub	org.videolan.VLC
 flathub	page.kramo.Cartridges
