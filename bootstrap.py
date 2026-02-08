@@ -175,6 +175,28 @@ class SetupDdcutil(Step):
             file.write("i2c-dev\n")
         print("Please reboot for changes to take effect.")
 
+class SetupOhMyZsh(Step):
+    """Setup oh-my-zsh goodies"""
+
+    def run(self) -> None:
+
+        # Autosuggestions
+        # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
+        run(
+            "git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions",
+            shell=True,
+        )
+
+        # Syntax highlighting
+        # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh
+        run(
+            "git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting",
+            shell=True,
+        )
+
+        # Install a patched nerd font
+        run(["oh-my-posh", "font", "install", "meslo"])
+
 
 @handle_keyboard_interrupt
 def main() -> None:
@@ -208,6 +230,7 @@ def main() -> None:
         SetupOpenTabletDriver,
         SetupDdcutil,
         SetZshAsDefaultShell,
+        SetupOhMyZsh,
     ]
     all_steps = (
         step_cls(rank=i + 1, total=len(all_steps_classes))

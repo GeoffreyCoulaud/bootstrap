@@ -22,6 +22,7 @@ openrgb
 psensor
 ttf-jetbrains-mono-nerd
 unrar
+uv
 wireshark-qt
 yarn
 yay
