@@ -4,6 +4,7 @@ from abc import ABC, abstractmethod
 from argparse import ArgumentParser
 from collections import defaultdict
 from functools import wraps
+from pathlib import Path
 from subprocess import run
 from typing import Callable
 from os import geteuid, getlogin, getuid, seteuid
@@ -86,7 +87,8 @@ class InstallDistroPackages(Step):
     """Install packages from the distro repositories"""
 
     def run(self) -> None:
-        with open("arch.txt", "r", encoding="utf-8") as file:
+        arch_file_path = Path(__file__).parent / "arch.txt"
+        with arch_file_path.open("r", encoding="utf-8") as file:
             run(["pacman", "-Syu", "--noconfirm", "-"], stdin=file)
 
 
@@ -94,7 +96,8 @@ class InstallAurPackages(Step):
     """Install packages from the AUR"""
 
     def run(self) -> None:
-        with open("aur.txt", "r", encoding="utf-8") as file:
+        aur_file_path = Path(__file__).parent / "aur.txt"
+        with aur_file_path.open("r", encoding="utf-8") as file:
             run(
                 [
                     "yay",
@@ -117,7 +120,8 @@ class AddFlatpakRepositories(Step):
     """Add flatpak repositories"""
 
     def run(self) -> None:
-        with open("flatpak-repos.txt", "r", encoding="utf-8") as file:
+        flatpak_repos_file_path = Path(__file__).parent / "flatpak-repos.txt"
+        with flatpak_repos_file_path.open("r", encoding="utf-8") as file:
             for line in file:
                 name, url = line.split()
                 run(["flatpak", "remote-add", "--if-not-exists", name, url])
@@ -127,7 +131,8 @@ class InstallFlatpakPackages(Step):
     """Install packages from flatpak"""
 
     def run(self) -> None:
-        with open("flatpak.txt", "r", encoding="utf-8") as file:
+        flatpak_file_path = Path(__file__).parent / "flatpak.txt"
+        with flatpak_file_path.open("r", encoding="utf-8") as file:
             refs_per_repo: dict[str, list[str]] = defaultdict(list[str])
             for line in file:
                 repo, ref = line.split()
@@ -146,6 +151,38 @@ class SetZshAsDefaultShell(Step):
         ).stdout.strip()
         run(["chsh", "-s", zsh])
         print("Please logout and login again to apply the changes.")
+
+
+class SetupShell(Step):
+    """Setup zsh goodies"""
+
+    def run(self) -> None:
+
+        # Autosuggestions
+        # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
+        run(
+            "git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions",
+            shell=True,
+        )
+
+        # Syntax highlighting
+        # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh
+        run(
+            "git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting",
+            shell=True,
+        )
+
+        # Install a patched nerd font
+        # Note: Assumes oh-my-posh is installed.
+        run(["oh-my-posh", "font", "install", "meslo"], check=False)
+
+        # Install the shell defaults
+        config_file_name = "zsh-config.sh"
+        config_path = Path(__file__).parent / config_file_name
+        config_path.copy_into(Path.home())
+        zshrc_path = Path.home() / ".zshrc"
+        with zshrc_path.open("a", encoding="utf-8") as file:
+            file.write(f'\nsource "$HOME/{config_file_name}"\n')
 
 
 class SetupOpenTabletDriver(Step):
@@ -174,28 +211,6 @@ class SetupDdcutil(Step):
         with open("/etc/modules-load.d/i2c.conf", "a") as file:
             file.write("i2c-dev\n")
         print("Please reboot for changes to take effect.")
-
-class SetupOhMyZsh(Step):
-    """Setup oh-my-zsh goodies"""
-
-    def run(self) -> None:
-
-        # Autosuggestions
-        # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
-        run(
-            "git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions",
-            shell=True,
-        )
-
-        # Syntax highlighting
-        # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh
-        run(
-            "git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting",
-            shell=True,
-        )
-
-        # Install a patched nerd font
-        run(["oh-my-posh", "font", "install", "meslo"])
 
 
 @handle_keyboard_interrupt
@@ -230,7 +245,7 @@ def main() -> None:
         SetupOpenTabletDriver,
         SetupDdcutil,
         SetZshAsDefaultShell,
-        SetupOhMyZsh,
+        SetupShell,
     ]
     all_steps = (
         step_cls(rank=i + 1, total=len(all_steps_classes))
