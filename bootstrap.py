@@ -186,7 +186,7 @@ class SetupShell(Step):
             file.write(f'\nsource "$HOME/{config_file_name}"\n')
 
 
-class SetupOpenTabletDriver(Step):
+class InstallOpenTabletDriver(Step):
     """Setup OpenTabletDriver for graphics tablet support"""
 
     def run(self) -> None:
@@ -196,7 +196,7 @@ class SetupOpenTabletDriver(Step):
         run(["systemctl", "--user", "enable", "--now", "opentabletdriver"])
 
 
-class SetupDdcutil(Step):
+class InstallDdcutil(Step):
     """Setup ddcutil for monitor brightness control"""
 
     def run(self) -> None:
@@ -211,6 +211,16 @@ class SetupDdcutil(Step):
         with open("/etc/modules-load.d/i2c.conf", "a") as file:
             file.write("i2c-dev\n")
         print("Please reboot for changes to take effect.")
+
+
+class InstallSdkman(Step):
+    """Setup sdkman to manage JDK versions"""
+
+    def run(self) -> None:
+        # Install zip (needed by the installer)
+        run(["sudo", "pacman", "-S", "--needed", "--noconfirm", "zip"])
+        # Install sdkman
+        run('curl -s "https://get.sdkman.io" | bash')
 
 
 @handle_keyboard_interrupt
@@ -238,8 +248,9 @@ def main() -> None:
         AddFlatpakRepositories,
         InstallMinimalFlatpakPackages,
         InstallAllFlatpakPackages,
-        SetupOpenTabletDriver,
-        SetupDdcutil,
+        InstallOpenTabletDriver,
+        InstallDdcutil,
+        InstallSdkman,
         SetZshAsDefaultShell,
         SetupShell,
     ]
