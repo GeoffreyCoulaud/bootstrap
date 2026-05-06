@@ -1,5 +1,5 @@
 makemkv
 ttf-comic-mono-git
-oh-my-posh
+oh-my-posh-bin
 visual-studio-code-bin
 input-remapper-bin
