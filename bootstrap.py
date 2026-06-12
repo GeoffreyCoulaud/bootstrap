@@ -7,8 +7,7 @@ from functools import wraps
 from pathlib import Path
 from subprocess import run
 from typing import Callable
-from os import geteuid, getlogin, getuid, seteuid
-from contextlib import AbstractContextManager
+from os import getlogin
 
 
 def handle_keyboard_interrupt(original_function) -> Callable:
@@ -115,21 +114,7 @@ class InstallAllFlatpakPackages(Step):
     """Install all packages from flatpak"""
 
     def run(self) -> None:
-        flatpak_file_path = Path(__file__).parent / "flatpak-full.txt"
-        with flatpak_file_path.open("r", encoding="utf-8") as file:
-            refs_per_repo: dict[str, list[str]] = defaultdict(list[str])
-            for line in file:
-                repo, ref = line.split()
-                refs_per_repo[repo].append(ref)
-            for repo, refs in refs_per_repo.items():
-                run(["flatpak", "install", "--noninteractive", repo, *refs])
-
-
-class InstallMinimalFlatpakPackages(Step):
-    """Install only minimal packages from flatpak"""
-
-    def run(self) -> None:
-        flatpak_file_path = Path(__file__).parent / "flatpak-minimal.txt"
+        flatpak_file_path = Path(__file__).parent / "flatpak.txt"
         with flatpak_file_path.open("r", encoding="utf-8") as file:
             refs_per_repo: dict[str, list[str]] = defaultdict(list[str])
             for line in file:
@@ -246,7 +231,6 @@ def main() -> None:
         InstallDistroPackages,
         InstallAurPackages,
         AddFlatpakRepositories,
-        InstallMinimalFlatpakPackages,
         InstallAllFlatpakPackages,
         InstallOpenTabletDriver,
         InstallDdcutil,
