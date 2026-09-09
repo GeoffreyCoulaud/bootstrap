@@ -1,4 +1,5 @@
 flathub	app.drey.Biblioteca
+flathub	app.zen_browser.zen
 flathub	be.alexandervanhee.gradia
 flathub	cafe.avery.Delfin
 flathub	cc.arduino.IDE2
@@ -10,6 +11,7 @@ flathub	com.calibre_ebook.calibre
 flathub	com.discordapp.Discord
 flathub	com.georgefb.mangareader
 flathub	com.github.Anuken.Mindustry
+flathub	com.github.dynobo.normcap
 flathub	com.github.finefindus.eyedropper
 flathub	com.github.huluti.Curtail
 flathub	com.github.jeromerobert.pdfarranger
@@ -23,21 +25,22 @@ flathub	com.github.tchx84.Flatseal
 flathub	com.github.tenderowl.frog
 flathub	com.github.wwmm.easyeffects
 flathub	com.heroicgameslauncher.hgl
-hytalelauncher-origin	com.hypixel.HytaleLauncher
 flathub	com.jeffser.Alpaca
 flathub	com.makemkv.MakeMKV
 flathub	com.mattjakeman.ExtensionManager
+flathub	com.modrinth.ModrinthApp
 flathub	com.prusa3d.PrusaSlicer
+flathub	com.pypyrev.linuxdcpp
 flathub	com.ranfdev.DistroShelf
 flathub	com.ugetdm.uGet
 flathub	com.ultimaker.cura
 flathub	com.usebottles.bottles
 flathub	com.usebruno.Bruno
+flathub	com.vixalien.sticky
 flathub	dev.geopjr.Collision
 flathub	fr.handbrake.ghb
 flathub	im.bernard.Nostalgia
 flathub	info.beyondallreason.bar
-flathub	info.cemu.Cemu
 flathub	info.cemu.Cemu
 flathub	info.febvre.Komikku
 flathub	io.dbeaver.DBeaverCommunity
@@ -55,7 +58,6 @@ flathub	io.github.tfuxu.Halftone
 flathub	io.github.ungoogled_software.ungoogled_chromium
 flathub	io.gitlab.adhami3310.Converter
 flathub	io.gitlab.adhami3310.Impression
-flathub	io.gitlab.librewolf-community
 flathub	io.gitlab.liferooter.TextPieces
 flathub	io.gitlab.news_flash.NewsFlash
 flathub	io.gitlab.theevilskeleton.Upscaler
@@ -66,6 +68,7 @@ flathub	io.otsaloma.gaupol
 flathub	io.speedofsound.SpeedOfSound
 flathub	it.mijorus.gearlever
 flathub	md.obsidian.Obsidian
+flathub	me.fouquet.Stencil
 flathub	net.davidotek.pupgui2
 flathub	net.ffkkinos.Wildcard
 flathub	net.kuribo64.melonDS
@@ -75,7 +78,6 @@ flathub	net.poedit.Poedit
 flathub	net.rpcs3.RPCS3
 flathub	net.veloren.airshipper
 flathub	nl.jknaapen.fladder
-flathub	org.aegisub.Aegisub
 flathub	org.aegisub.Aegisub
 flathub	org.angryip.ipscan
 flathub	org.audacityteam.Audacity
@@ -98,7 +100,6 @@ flathub	org.gnome.Firmware
 flathub	org.gnome.Fractal
 flathub	org.gnome.GHex
 flathub	org.gnome.Mines
-flathub	org.gnome.NetworkDisplays
 flathub	org.gnome.Podcasts
 flathub	org.gnome.Polari
 flathub	org.gnome.Rhythmbox3
@@ -123,9 +124,8 @@ flathub	org.kicad.KiCad
 flathub	org.libreoffice.LibreOffice
 flathub	org.libretro.RetroArch
 flathub	org.localsend.localsend_app
-flathub	org.mozilla.Thunderbird
 flathub	org.mozilla.firefox
-flathub	org.nickvision.tubeconverter
+flathub	org.mozilla.thunderbird_esr
 flathub	org.nickvision.tubeconverter
 flathub	org.nicotine_plus.Nicotine
 flathub	org.onlyoffice.desktopeditors
@@ -134,12 +134,10 @@ flathub	org.pipewire.Helvum
 flathub	org.ppsspp.PPSSPP
 flathub	org.prismlauncher.PrismLauncher
 flathub	org.qbittorrent.qBittorrent
-flathub	org.raspberrypi.rpi-imager
 flathub	org.shotcut.Shotcut
 flathub	org.signal.Signal
 flathub	org.torproject.torbrowser-launcher
 flathub	org.videolan.VLC
-flathub	page.kramo.Cartridges
 flathub	re.sonny.Commit
 flathub	re.sonny.Workbench
 flathub	sh.ppy.osu
