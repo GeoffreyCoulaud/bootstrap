@@ -1,13 +1,15 @@
 #!/bin/env python3
 
+# ruff: noqa: PLW1510
+
 from abc import ABC, abstractmethod
 from argparse import ArgumentParser
 from collections import defaultdict
+from collections.abc import Callable
 from functools import wraps
+from os import getlogin
 from pathlib import Path
 from subprocess import run
-from typing import Callable
-from os import getlogin
 
 
 def handle_keyboard_interrupt(original_function) -> Callable:
@@ -165,7 +167,7 @@ class SetupShell(Step):
         # Install the shell defaults
         config_file_name = "zsh-config.sh"
         config_path = Path(__file__).parent / config_file_name
-        config_path.copy_into(Path.home())
+        config_path.copy_into(Path.home())  # type: ignore
         zshrc_path = Path.home() / ".zshrc"
         with zshrc_path.open("a", encoding="utf-8") as file:
             file.write(f'\nsource "$HOME/{config_file_name}"\n')
