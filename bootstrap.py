@@ -101,15 +101,60 @@ class InstallAurPackages(Step):
             )
 
 
-class AddFlatpakRepositories(Step):
-    """Add flatpak repositories"""
+class AddFlathubRepoForUser(Step):
+    """Add flathub repository for the user, removing it for the system if present"""
+
+    def __has_system_remote(self, remote: str) -> bool:
+        return (
+            remote
+            in run(
+                ["flatpak", "remotes", "--system", "--columns=name"], text=True
+            ).stdout
+        )
+
+    def __list_system_apps(self, remote: str) -> list[str]:
+        sys_apps_run = run(
+            ["flatpak", "list", "--app", "--system", "--columns=application,origin"],
+            check=True,
+            text=True,
+        )
+        sys_items = [
+            tuple(item.split("\t", maxsplit=1))  # -
+            for item in sys_apps_run.stdout
+        ]
+        sys_apps = [app for app, app_remote in sys_items if app_remote == remote]
+        return sys_apps
 
     def run(self) -> None:
-        flatpak_repos_file_path = Path(__file__).parent / "flatpak-repos.txt"
-        with flatpak_repos_file_path.open("r", encoding="utf-8") as file:
-            for line in file:
-                name, url = line.split()
-                run(["flatpak", "remote-add", "--if-not-exists", name, url])
+
+        name = "flathub"
+        url = "https://flathub.org/repo/flathub.flatpakrepo"
+        migrated_apps = list[str]()
+
+        # Check if flathub is present in system repos
+        has_system_flathub = self.__has_system_remote(remote=name)
+        if has_system_flathub:
+            print("System-wide flathub detected, will be migrated to user.")
+            migrated_apps = self.__list_system_apps(remote=name)
+            print(f"{len(migrated_apps)} apps will be migrated.")
+            run(["flatpak", "remote-delete", "--system", "--force", name])
+
+        # Add user flathub
+        run(["flatpak", "--user", "remote-add", "--if-not-exists", name, url])
+
+        # Migrate system apps
+        if len(migrated_apps) > 0:
+            print("Migrating system flathub apps to user flathub")
+            run(
+                [
+                    "flatpak",
+                    "install",
+                    "--user",
+                    "--noninteractive",
+                    name,
+                    *migrated_apps,
+                ]
+            )
 
 
 class InstallAllFlatpakPackages(Step):
@@ -232,7 +277,7 @@ def main() -> None:
         UpdatePacmanMirrors,
         InstallDistroPackages,
         InstallAurPackages,
-        AddFlatpakRepositories,
+        AddFlathubRepoForUser,
         InstallAllFlatpakPackages,
         InstallOpenTabletDriver,
         InstallDdcutil,
